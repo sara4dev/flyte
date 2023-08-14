@@ -3,7 +3,7 @@ entries:
   flyte:
   - apiVersion: v2
     appVersion: v1.9.0
-    created: "2023-08-14T15:41:07.385479-05:00"
+    created: "2023-08-14T15:43:41.304233-05:00"
     dependencies:
     - alias: flyte
       name: flyte-core
@@ -28,7 +28,7 @@ entries:
       repository: https://kubernetes.github.io/dashboard/
       version: 4.0.2
     description: A Helm chart for Flyte Sandbox
-    digest: b93507bd01737e93991b81dae4ecfeea60d51c3d8eb5abed6a9de127d7d6641b
+    digest: eb4503629f7b21d3b457e8dd07879bccd50a3fca80be83d56c93c1694a67c215
     name: flyte
     type: application
     urls:
@@ -37,9 +37,9 @@ entries:
   flyte-binary:
   - apiVersion: v2
     appVersion: v1.9.0
-    created: "2023-08-14T15:41:07.370209-05:00"
+    created: "2023-08-14T15:43:41.289029-05:00"
     description: Chart for basic single Flyte executable deployment
-    digest: 913e27baf67487d302944174361dd0702b251f0f4941421c68f4a9d1939a3932
+    digest: f5d7b0bdc2419c6cc13c26c2f966cdcd93f50bfdbb89d271d0074e079a947533
     name: flyte-binary
     type: application
     urls:
@@ -48,12 +48,12 @@ entries:
   flyte-core:
   - apiVersion: v2
     appVersion: v1.9.0
-    created: "2023-08-14T15:41:07.372686-05:00"
+    created: "2023-08-14T15:43:41.29171-05:00"
     description: A Helm chart for Flyte core
-    digest: 9815f30cfd9f58d602d1fe6793480c44631e5c1f32dca0affcf7398ac23908aa
+    digest: 6c36cd2c8805b810fe344f422ad49ea48eb04741c064f5e30424ccc380cf88f7
     name: flyte-core
     type: application
     urls:
     - https://sara4dev.github.io/flyte/flyte-core-v1.9.0.tgz
     version: v1.9.0
-generated: "2023-08-14T15:41:07.368683-05:00"
+generated: "2023-08-14T15:43:41.287399-05:00"
