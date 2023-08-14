@@ -3,7 +3,7 @@ entries:
   flyte:
   - apiVersion: v2
     appVersion: v1.9.0-nvidia
-    created: "2023-08-14T14:22:39.064718-05:00"
+    created: "2023-08-14T15:05:22.327831-05:00"
     dependencies:
     - alias: flyte
       name: flyte-core
@@ -28,7 +28,7 @@ entries:
       repository: https://kubernetes.github.io/dashboard/
       version: 4.0.2
     description: A Helm chart for Flyte Sandbox
-    digest: 0dce1c4bd709f038494a647908f72df57edc60c40063afdca5292b006b15a75b
+    digest: 2a82c80cdfb9ad1640a099b496d178c2f913491dfe652588f7258de4545f638b
     name: flyte
     type: application
     urls:
@@ -37,9 +37,9 @@ entries:
   flyte-binary:
   - apiVersion: v2
     appVersion: v1.9.0-nvidia
-    created: "2023-08-14T14:22:39.051929-05:00"
+    created: "2023-08-14T15:05:22.313452-05:00"
     description: Chart for basic single Flyte executable deployment
-    digest: 32f7826f2330172221915d4f606ee3914af3f0e88380f222a825570e6d60ffc8
+    digest: ffecdddfcbc10647db455ad256b29889e95c3c3eddb7ddb7558459de19f3f6c6
     name: flyte-binary
     type: application
     urls:
@@ -48,12 +48,12 @@ entries:
   flyte-core:
   - apiVersion: v2
     appVersion: v1.9.0-nvidia
-    created: "2023-08-14T14:22:39.053851-05:00"
+    created: "2023-08-14T15:05:22.317862-05:00"
     description: A Helm chart for Flyte core
-    digest: 10660b2863a4bcebe37a210b7fa729200cbc0813e8da0f2e471bbb4b5900bb36
+    digest: 3fb72d66284e37f4902cd8cdbc973795c43a8bc3677fff1a6fef92db80f0223e
     name: flyte-core
     type: application
     urls:
     - https://sara4dev.github.io/flyte/flyte-core-v1.9.0-nvidia.tgz
     version: v1.9.0-nvidia
-generated: "2023-08-14T14:22:39.050618-05:00"
+generated: "2023-08-14T15:05:22.312214-05:00"
