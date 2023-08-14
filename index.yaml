@@ -1,0 +1,59 @@
+apiVersion: v1
+entries:
+  flyte:
+  - apiVersion: v2
+    appVersion: v1.9.0-nvidia
+    created: "2023-08-14T14:22:39.064718-05:00"
+    dependencies:
+    - alias: flyte
+      name: flyte-core
+      repository: file://../flyte-core
+      version: v0.1.10
+    - condition: contour.enabled
+      name: contour
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.10.1
+    - alias: sparkoperator
+      condition: sparkoperator.enabled
+      name: spark-operator
+      repository: https://googlecloudplatform.github.io/spark-on-k8s-operator
+      version: 1.1.15
+    - alias: daskoperator
+      condition: daskoperator.enabled
+      name: dask-kubernetes-operator
+      repository: https://helm.dask.org
+      version: 2022.12.0
+    - condition: kubernetes-dashboard.enabled
+      name: kubernetes-dashboard
+      repository: https://kubernetes.github.io/dashboard/
+      version: 4.0.2
+    description: A Helm chart for Flyte Sandbox
+    digest: 0dce1c4bd709f038494a647908f72df57edc60c40063afdca5292b006b15a75b
+    name: flyte
+    type: application
+    urls:
+    - https://sara4dev.github.io/flyte/flyte-v1.9.0-nvidia.tgz
+    version: v1.9.0-nvidia
+  flyte-binary:
+  - apiVersion: v2
+    appVersion: v1.9.0-nvidia
+    created: "2023-08-14T14:22:39.051929-05:00"
+    description: Chart for basic single Flyte executable deployment
+    digest: 32f7826f2330172221915d4f606ee3914af3f0e88380f222a825570e6d60ffc8
+    name: flyte-binary
+    type: application
+    urls:
+    - https://sara4dev.github.io/flyte/flyte-binary-v1.9.0-nvidia.tgz
+    version: v1.9.0-nvidia
+  flyte-core:
+  - apiVersion: v2
+    appVersion: v1.9.0-nvidia
+    created: "2023-08-14T14:22:39.053851-05:00"
+    description: A Helm chart for Flyte core
+    digest: 10660b2863a4bcebe37a210b7fa729200cbc0813e8da0f2e471bbb4b5900bb36
+    name: flyte-core
+    type: application
+    urls:
+    - https://sara4dev.github.io/flyte/flyte-core-v1.9.0-nvidia.tgz
+    version: v1.9.0-nvidia
+generated: "2023-08-14T14:22:39.050618-05:00"
