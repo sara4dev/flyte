@@ -1,0 +1,59 @@
+apiVersion: v1
+entries:
+  flyte:
+  - apiVersion: v2
+    appVersion: v1.9.0
+    created: "2023-08-14T16:02:07.211173-05:00"
+    dependencies:
+    - alias: flyte
+      name: flyte-core
+      repository: file://../flyte-core
+      version: v0.1.10
+    - condition: contour.enabled
+      name: contour
+      repository: https://charts.bitnami.com/bitnami
+      version: 7.10.1
+    - alias: sparkoperator
+      condition: sparkoperator.enabled
+      name: spark-operator
+      repository: https://googlecloudplatform.github.io/spark-on-k8s-operator
+      version: 1.1.15
+    - alias: daskoperator
+      condition: daskoperator.enabled
+      name: dask-kubernetes-operator
+      repository: https://helm.dask.org
+      version: 2022.12.0
+    - condition: kubernetes-dashboard.enabled
+      name: kubernetes-dashboard
+      repository: https://kubernetes.github.io/dashboard/
+      version: 4.0.2
+    description: A Helm chart for Flyte Sandbox
+    digest: 77658abd2c4dfd6f78cf9c6d2504a6eee2a5b9f67877d1296d82f07416df9aca
+    name: flyte
+    type: application
+    urls:
+    - https://sara4dev.github.io/flyte/flyte-v1.9.0.tgz
+    version: v1.9.0
+  flyte-binary:
+  - apiVersion: v2
+    appVersion: v1.9.0
+    created: "2023-08-14T16:02:07.190961-05:00"
+    description: Chart for basic single Flyte executable deployment
+    digest: 660a2c579899968956396d41e0c4d2ad4a54503343b8c1e392335585f40ba7e4
+    name: flyte-binary
+    type: application
+    urls:
+    - https://sara4dev.github.io/flyte/flyte-binary-v1.9.0.tgz
+    version: v1.9.0
+  flyte-core:
+  - apiVersion: v2
+    appVersion: v1.9.0
+    created: "2023-08-14T16:02:07.193876-05:00"
+    description: A Helm chart for Flyte core
+    digest: 733a6b52a627fb0d71f2b86509bf897385328a09c54aec177713c420f292d5d8
+    name: flyte-core
+    type: application
+    urls:
+    - https://sara4dev.github.io/flyte/flyte-core-v1.9.0.tgz
+    version: v1.9.0
+generated: "2023-08-14T16:02:07.189143-05:00"
