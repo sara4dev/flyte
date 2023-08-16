@@ -3,7 +3,7 @@
 - path: /flyteidl.service.SignalService
   pathType: ImplementationSpecific
   backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
     service:
       name: flyteadmin
       port:
@@ -15,7 +15,7 @@
 - path: /flyteidl.service.SignalService/*
   pathType: ImplementationSpecific
   backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
     service:
       name: flyteadmin
       port:
@@ -27,7 +27,7 @@
 - path: /flyteidl.service.AdminService
   pathType: ImplementationSpecific
   backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
     service:
       name: flyteadmin
       port:
@@ -39,7 +39,7 @@
 - path: /flyteidl.service.AdminService/*
   pathType: ImplementationSpecific
   backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
     service:
       name: flyteadmin
       port:
@@ -51,7 +51,7 @@
 - path: /flyteidl.service.DataProxyService
   pathType: ImplementationSpecific
   backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
     service:
       name: flyteadmin
       port:
@@ -63,7 +63,7 @@
 - path: /flyteidl.service.DataProxyService/*
   pathType: ImplementationSpecific
   backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
     service:
       name: flyteadmin
       port:
@@ -75,7 +75,7 @@
 - path: /flyteidl.service.AuthMetadataService
   pathType: ImplementationSpecific
   backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
     service:
       name: flyteadmin
       port:
@@ -87,7 +87,7 @@
 - path: /flyteidl.service.AuthMetadataService/*
   pathType: ImplementationSpecific
   backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
     service:
       name: flyteadmin
       port:
@@ -99,7 +99,7 @@
 - path: /flyteidl.service.IdentityService
   pathType: ImplementationSpecific
   backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
     service:
       name: flyteadmin
       port:
@@ -111,7 +111,7 @@
 - path: /flyteidl.service.IdentityService/*
   pathType: ImplementationSpecific
   backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
     service:
       name: flyteadmin
       port:
@@ -123,7 +123,7 @@
 - path: /grpc.health.v1.Health
   pathType: ImplementationSpecific
   backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
     service:
       name: flyteadmin
       port:
@@ -135,7 +135,7 @@
 - path: /grpc.health.v1.Health/*
   pathType: ImplementationSpecific
   backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
     service:
       name: flyteadmin
       port:
@@ -146,7 +146,7 @@
 {{- end }}
   {{- end }}
   {{- if .Values.common.ingress.enabled }}
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
 apiVersion: networking.k8s.io/v1
 {{- else }}
 apiVersion: networking.k8s.io/v1beta1
@@ -166,7 +166,7 @@ spec:
           - path: /*
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: ssl-redirect
                 port:
@@ -181,7 +181,7 @@ spec:
           - path: /__webpack_hmr
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteconsole
                 port:
@@ -195,7 +195,7 @@ spec:
           - path: /console
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteconsole
                 port:
@@ -207,7 +207,7 @@ spec:
           - path: /console/*
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteconsole
                 port:
@@ -219,7 +219,7 @@ spec:
           - path: /api
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -231,7 +231,7 @@ spec:
           - path: /api/*
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -243,7 +243,7 @@ spec:
           - path: /healthcheck
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -255,7 +255,7 @@ spec:
           - path: /v1/*
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -269,7 +269,7 @@ spec:
           - path: /openapi
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: redoc
                 port:
@@ -282,7 +282,7 @@ spec:
           - path: /openapi/*
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: redoc
                 port:
@@ -295,7 +295,7 @@ spec:
           - path: /.well-known
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -307,7 +307,7 @@ spec:
           - path: /.well-known/*
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -319,7 +319,7 @@ spec:
           - path: /login
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -331,7 +331,7 @@ spec:
           - path: /login/*
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -343,7 +343,7 @@ spec:
           - path: /logout
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -355,7 +355,7 @@ spec:
           - path: /logout/*
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -367,7 +367,7 @@ spec:
           - path: /callback
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -379,7 +379,7 @@ spec:
           - path: /callback/*
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -391,7 +391,7 @@ spec:
           - path: /me
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -403,7 +403,7 @@ spec:
           - path: /config
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -415,7 +415,7 @@ spec:
           - path: /config/*
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -427,7 +427,7 @@ spec:
           - path: /oauth2
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -439,7 +439,7 @@ spec:
           - path: /oauth2/*
             pathType: ImplementationSpecific
             backend:
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
               service:
                 name: flyteadmin
                 port:
@@ -464,7 +464,7 @@ spec:
 # Certain ingress controllers like nginx cannot serve HTTP 1 and GRPC with a single ingress because GRPC can only
 # enabled on the ingress object, not on backend services (GRPC annotation is set on the ingress, not on the services).
 ---
-{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1/Ingress" }}
+{{- if $.Capabilities.APIVersions.Has "networking.k8s.io/v1" }}
 apiVersion: networking.k8s.io/v1
 {{- else }}
 apiVersion: networking.k8s.io/v1beta1
